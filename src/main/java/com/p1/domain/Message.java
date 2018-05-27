@@ -12,7 +12,7 @@ public class Message {
     private String tag;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @Column(name = "user_id")
+    @JoinColumn(name = "user_id")
     private User author;
 
     public Message() {
@@ -32,9 +32,9 @@ public class Message {
         return id;
     }
 
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getText() {
         return text;
